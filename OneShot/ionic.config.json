@@ -1,0 +1,7 @@
+{
+  "name": "OneShot",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
