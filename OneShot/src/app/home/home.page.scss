@@ -10,13 +10,18 @@ section{
   background-size: 400% 400%;
   position: relative;
   animation: animate 11s ease-in-out infinite;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   margin: 0;
   padding: 0;
   outline: 0;
 
+}
+
+.body-content{
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .login-card{
@@ -124,3 +129,12 @@ img{
   transition:all 1s ease;
 }
 
+.mybtn{
+  width: 80%;
+  margin-left: 10%;
+}
+
+.myInput{
+  background-color: transparent;
+  border-color: #1e2023;
+}

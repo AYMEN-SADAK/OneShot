@@ -1,26 +1,76 @@
 <ion-content [fullscreen]="true">
-  <section>
 
+  <section>
+    <header style="padding: 1%;background-color: transparent">
+      <div class="navbar navbar-light box-shadow headerStyle" style="background-color: transparent">
+        <div class="container d-flex justify-content-between">
+          <!-- Merchant Portal Title -->
+          <a href="#" class="navbar-brand d-flex align-items-center textStyle">
+            <strong><ion-icon name="logo-ionitron" size="large"></ion-icon>&nbsp;OneShot</strong>
+          </a>
+          <!-- Language Switch -->
+          <div class="btn-group">
+            <button type="button" class="btn dropdown-toggle languageStyle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+              <fa-icon [icon]="langIcon"></fa-icon>
+              <span *ngIf="lang==='fr'">&nbsp;FR&nbsp;</span><span *ngIf="lang==='en'">&nbsp;EN&nbsp;</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right languageStyle2">
+              <button class="dropdown-item" type="button" (click)="changeLanguage('fr')">
+                <fa-icon *ngIf="lang === 'fr'" [icon]="checkIcon"></fa-icon> &nbsp;Français
+              </button>
+              <button class="dropdown-item" type="button" (click)="changeLanguage('en')">
+                <fa-icon *ngIf="lang === 'en'" [icon]="checkIcon"></fa-icon> &nbsp;English
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+   <div class="body-content">
     <div class="card login-form ion-margin" id="login-show">
+      <h3 class="card-title text-center text-dark"><strong>LOG IN</strong></h3>
+
       <div class="card-body">
         <form>
           <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+
+
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text bg-dark" style="border-color: #1e1e1e">
+                  <fa-icon class="text-secondary"  [icon]="loginIcon"></fa-icon>
+                </div>
+              </div>
+              <input class="form-control myInput" type="text" id="login" name="login"
+                     placeholder="Login" required="" autofocus=""></div>
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+
+            <div>
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text bg-dark" style="border-color: #1e1e1e">
+                    <fa-icon class="text-secondary"  [icon]="passwordIcon"></fa-icon>
+                  </div>
+                </div>
+                <input class="form-control myInput" type="password" id="password" name="password"
+                       placeholder="Password" required="">
+              </div>
+            </div>
           </div>
-          <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-outline-secondary mybtn">Submit</button>
         </form>
       </div>
+      <div class="card-footer text-center text-dark">
+        <ion-icon name="logo-google" class="ion-margin-horizontal"></ion-icon>
+        <ion-icon name="logo-facebook" class="ion-margin-horizontal"></ion-icon>
+        <ion-icon name="logo-whatsapp" class="ion-margin-horizontal"></ion-icon>
+        <ion-icon name="logo-instagram" class="ion-margin-horizontal"></ion-icon>
+        <ion-icon name="logo-github" class="ion-margin-horizontal"></ion-icon>
+      </div>
     </div><!-- /.card -->
+   </div>
 
 
   </section>
